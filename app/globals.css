@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-orange: #e25b2a;
+  --color-orange-hover: #c94e22;
+  --color-orange-deep: #c4451c;
+  --color-charcoal: #1a1a1a;
+  --color-cream: #f5f1ea;
+  --color-cream-dark: #eee8e1;
+  --color-muted: #5f5a56;
+  --color-background: #f5f1ea;
+  --color-foreground: #1a1a1a;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f1ea;
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+.bg-grid-light {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.hero-wash {
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 40%, #f07842 0%, #e25b2a 48%, #c4451c 100%);
+}
+
+.hero-wash.bg-grid-light {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 70% at 50% 40%, #f07842 0%, #e25b2a 48%, #c4451c 100%);
+  background-size: 72px 72px, 72px 72px, auto;
+  background-position: 0 0, 0 0, 50% 40%;
+  animation: grid-drift 32s linear infinite;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.lift-card {
+  transition:
+    transform 0.45s cubic-bezier(0.16, 0.84, 0.24, 1),
+    box-shadow 0.45s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+
+.lift-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px -24px rgba(26, 26, 26, 0.35);
+}
+
+.img-zoom {
+  transition: transform 0.8s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+
+.group:hover .img-zoom {
+  transform: scale(1.06);
+}
+
+.hero-float {
+  animation: hero-float 7s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0, 0 0, 50% 40%;
+  }
+  to {
+    background-position: 72px 72px, 72px 72px, 50% 40%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .lift-card,
+  .img-zoom,
+  .hero-float,
+  .hero-wash.bg-grid-light {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
