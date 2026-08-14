@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { footerLinkCols, site } from "@/lib/site";
@@ -36,46 +39,51 @@ const social = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  const hideCta = pathname === "/about" || pathname === "/what-we-do";
+
   return (
     <footer>
-      <div className="bg-cream">
-        <Container>
-          <div className="rounded-t-[2.5rem] bg-orange px-6 py-14 text-center sm:px-12 md:py-20">
-            <h2 className="text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
-              Tell Us Your Challenge. We Will Work Out{" "}
-              <span className="font-bold">
-                <span className="relative inline-block pb-3">
-                  The Rest.
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/assets/underline.svg"
-                    alt=""
-                    width={357}
-                    height={17}
-                    className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0 invert"
-                  />
+      {hideCta ? null : (
+        <div className="bg-cream">
+          <Container>
+            <div className="rounded-t-[2.5rem] bg-orange px-6 py-14 text-center sm:px-12 md:py-20">
+              <h2 className="text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
+                Tell Us Your Challenge. We Will Work Out{" "}
+                <span className="font-bold">
+                  <span className="relative inline-block pb-3">
+                    The Rest.
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/underline.svg"
+                      alt=""
+                      width={357}
+                      height={17}
+                      className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0 invert"
+                    />
+                  </span>
                 </span>
-              </span>
-            </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white md:text-base">
-              Most of our clients arrive with a situation rather than a
-              specification, and that is the right place to begin. Describe what
-              you are facing in your own words. We will tell you plainly what
-              resolving it would involve, what it would take, and whether we are
-              the right people for it. If we are not, we will say so and point
-              you toward someone who is.
-            </p>
-            <div className="mt-8">
-              <Button href="/contact" arrow>
-                Tell Us Your Challenge
-              </Button>
+              </h2>
+              <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white md:text-base">
+                Most of our clients arrive with a situation rather than a
+                specification, and that is the right place to begin. Describe what
+                you are facing in your own words. We will tell you plainly what
+                resolving it would involve, what it would take, and whether we are
+                the right people for it. If we are not, we will say so and point
+                you toward someone who is.
+              </p>
+              <div className="mt-8">
+                <Button href="/contact" arrow>
+                  Tell Us Your Challenge
+                </Button>
+              </div>
+              <p className="mt-4 text-sm text-white/90">
+                No cost, no obligation, and no sales pitch.
+              </p>
             </div>
-            <p className="mt-4 text-sm text-white/90">
-              No cost, no obligation, and no sales pitch.
-            </p>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      )}
 
       <div className="bg-charcoal bg-grid-dark">
         <Container className="pt-16">

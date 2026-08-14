@@ -1,55 +1,65 @@
 import type { Metadata } from "next";
-import { InfoCard } from "@/components/content/InfoCard";
+import { ExpertiseSlider } from "@/components/home/ExpertiseSlider";
 import { CtaBanner } from "@/components/layout/CtaBanner";
 import { PageHero } from "@/components/layout/PageHero";
+import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
-import { allServices, buildGroups } from "@/lib/site";
+import { ServiceOfferCard } from "@/components/what-we-do/ServiceOfferCard";
+import { whatWeDoOffers } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "What We Do",
   description:
-    "Engineering that holds up across the product lifecycle — AI, web, mobile, cloud, and platform work.",
+    "Lean Create helps organizations solve business problems, build digital products, and modernize how they work.",
 };
 
 export default function WhatWeDoPage() {
   return (
     <>
-      <PageHero title="What We Do" />
+      <PageHero title="What We Do?" />
       <section className="bg-white">
         <Container className="py-16 md:py-24">
-          <h2 className="mx-auto max-w-3xl text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
-            Engineering that holds up across the product lifecycle.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-6 text-muted md:text-base">
-            One partner for your transformation journey — whether you are
-            modernizing, scaling, or transforming with AI.
-          </p>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {allServices.map((item) => (
-              <InfoCard key={item.title} {...item} />
+          <Reveal>
+            <h2 className="mx-auto max-w-4xl text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.6rem] md:leading-tight">
+              From Idea To Execution, And{" "}
+              <span className="relative inline-block pb-3">
+                Everything
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/assets/underline.svg"
+                  alt=""
+                  width={357}
+                  height={17}
+                  className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none"
+                />
+              </span>{" "}
+              In Between.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-7 text-muted md:text-base">
+              Lean Create helps organizations solve business problems, build
+              digital products, and modernize how they work. Wherever you are in
+              the journey, we meet you there.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+            {whatWeDoOffers.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.04} className="h-full">
+                <ServiceOfferCard {...item} />
+              </Reveal>
             ))}
           </div>
         </Container>
       </section>
-      {buildGroups.map((group) => (
-        <section key={group.heading} className="bg-cream">
-          <Container className="py-16 md:py-20">
-            <h2 className="text-center text-3xl font-bold tracking-tight text-charcoal">
-              {group.heading}
-            </h2>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {group.items.map((item) => (
-                <InfoCard key={item.title} {...item} />
-              ))}
-            </div>
-          </Container>
-        </section>
-      ))}
-      <section className="bg-white py-8 pb-16 md:pb-20">
+      <section className="bg-white pb-8 md:pb-12">
         <CtaBanner
-          title="Tell us the outcome you need. We'll map the build."
-          buttonLabel="Talk To An Expert"
+          eyebrow="Not Sure Which Of These You Need?"
+          title="Start With Your Challenge And We'll Figure It Out Together."
+          underline="Together."
+          buttonLabel="Tell Us Your Challenge"
         />
+      </section>
+      <section className="bg-white pb-16 md:pb-20">
+        <ExpertiseSlider />
       </section>
     </>
   );

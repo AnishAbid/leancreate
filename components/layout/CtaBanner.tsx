@@ -7,6 +7,7 @@ import { cn } from "@/lib/cn";
 type CtaBannerProps = {
   title: string;
   underline?: string;
+  eyebrow?: string;
   buttonLabel: string;
   href?: string;
   tone?: "orange" | "dark";
@@ -16,6 +17,7 @@ type CtaBannerProps = {
 export function CtaBanner({
   title,
   underline,
+  eyebrow,
   buttonLabel,
   href = "/contact",
   tone = "orange",
@@ -32,12 +34,20 @@ export function CtaBanner({
           tone === "orange" ? "hero-wash bg-grid-light" : "bg-charcoal",
         )}
       >
-        <h2 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[2.6rem] md:leading-tight">
+        {eyebrow ? (
+          <p className="text-sm text-white md:text-base">{eyebrow}</p>
+        ) : null}
+        <h2
+          className={cn(
+            "mx-auto max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[2.6rem] md:leading-tight",
+            eyebrow ? "mt-4" : "",
+          )}
+        >
           {parts[0]}
           {underline ? (
-            <span className="relative inline-block">
+            <span className="relative inline-block pb-3">
               {underline}
-              <ScribbleUnderline className="absolute -bottom-1 left-0 h-3 w-full text-charcoal" />
+              <ScribbleUnderline className="absolute bottom-0 left-0 h-3 w-full text-charcoal" />
             </span>
           ) : null}
           {parts[1] ?? ""}

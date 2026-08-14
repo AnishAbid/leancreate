@@ -591,3 +591,123 @@ export const caseStudies = [
     image: "/images/case-study-1.png",
   },
 ];
+
+export const aboutIntro = [
+  "Lean Create is a strategy and technology consultancy. We start with your challenge, work to understand it properly, and then bring you whatever resolving it actually requires.",
+  "Sometimes that is a single specialist. If you need a technical architect to review your systems, a product leader to bring order to a roadmap, or a designer for a defined piece of work, we connect you with the right person from a network built over years and selected on the basis of delivered work. Sometimes it is a complete team, assembled and managed on your behalf. And sometimes it is an end to end product, taken from initial concept through to a launched, working system.",
+  "What does not change is where we begin. We do not arrive with a solution and look for somewhere to apply it. We listen first, understand the business and the constraints around it, and then recommend the path we believe is right, whether that is extensive or minimal.",
+  "Our clients range from startup founders and family businesses to large enterprises, governments, and universities. What they have in common is a real problem to solve: a product that needs to exist, an operation that needs to run better, or an organization that needs to be ready for what is coming.",
+  "Most consultancies stop at the recommendation. We stay to execute. And we measure the work the way you do: in results. Products launched, operations improved, decisions made with confidence. No buzzwords, no fifty page decks that sit in a drawer. Just practical work that creates long term value.",
+];
+
+export const aboutFounder = {
+  name: "Zara Khurram",
+  image: "/images/ceo-image.png",
+  paragraphs: [
+    "Lean Create was founded by Zara Khurram, a product leader with experience delivering software across a broad range of industries.",
+    "Her work covers healthcare, financial technology, human resources platforms, social media, data management, cybersecurity, and enterprise artificial intelligence. She has led products from initial concept through to launch, directed the delivery of large scale technology programs for enterprise clients, and worked closely with technical architects, engineers, designers, and product specialists throughout. Across those years, the most valuable asset she built was not any single product. It was the network of people who built them.",
+  ],
+};
+
+export const aboutNetwork = [
+  "Lean Create is built on relationships developed over a career of delivery work, not on a recruitment database.",
+  "Every specialist we connect you with is someone known through delivered work: technical architects, senior engineers, product leaders, designers, automation specialists, data and cybersecurity professionals. They have been observed under real conditions, on real projects, against real deadlines. That is a materially different basis for selection than a strong CV and a good interview.",
+  "The network also extends well beyond technology. Through her role as Vice President of the Central Punjab Chapter of the Pakistan United States Alumni Network, a professional community exceeding ten thousand members, Zara has built relationships across business, academia, government, and development organizations. Those connections keep Lean Create close to how organizations in different sectors actually operate, and they mean that when a challenge requires expertise outside our immediate domain, we usually know precisely who to bring in.",
+  "For you, the practical consequence is straightforward. You gain access to expertise that is ordinarily reached only through personal introduction, matched specifically to your challenge, and available for exactly as long as you require it.",
+];
+
+export const aboutModel = [
+  "We are structured deliberately. A traditional consultancy sells you the people it employs, which means the recommended solution often reflects who is available rather than what the work requires. We operate differently. We assess what your challenge genuinely demands, then connect you with the specialists to match, whether that is one person for one task or a full team for a full build.",
+  "You receive senior expertise in the specific domain you need, at the level the work genuinely requires, without paying for a bench you are not using.",
+];
+
+export const aboutHowWeWork = [
+  {
+    title: "The Right Experts",
+    body: "Our experts are selected through demonstrated experience on real projects, with real constraints, stakeholders, and outcomes. When we recommend someone for your business, it is because we understand the value they can bring to the work. We design each engagement around the complexity of the work, the expertise required, and your budget. That may mean a senior specialist for a critical decision, a mid-level resource for execution, or a carefully structured combination of both. We explain why each role is there.",
+  },
+  {
+    title: "Flexible engagements that scale with you",
+    body: "Use the expertise you need, for as long as you need it. Engage one specialist for a defined problem, assemble a multidisciplinary team for a complete build, or work with us continuously through a retained partnership. The relationship can expand, reduce, or evolve as your needs change.",
+  },
+  {
+    title: "Transparency by design",
+    body: "You should always know what is happening, who is involved, what it will cost, and where the risks are. The plan, team structure, costs, assumptions, responsibilities, and potential challenges are made clear from the beginning and throughout the engagement. Nothing about how we work should come as a surprise.",
+  },
+  {
+    title: "Strategy and Execution",
+    body: "We connect thinking with delivery. Whether you are building a product, transforming an operation, introducing AI, or solving a business problem, our recommendations are designed with a realistic path to implementation.",
+  },
+  {
+    title: "Practical thinking over presentation",
+    body: "We focus on decisions, actions, priorities, and measurable next steps. Every recommendation should help you understand what to do next, who should do it, and how it can realistically be executed.",
+  },
+  {
+    title: "Understand first. Solve second.",
+    body: "The quality of the solution depends on how well the problem is understood. We do not arrive with predetermined answers. We ask questions, challenge assumptions, examine the wider context, and understand what is actually causing the problem before recommending a solution.",
+  },
+  {
+    title: "Confidential by design",
+    body: "Your ideas, data, strategies, and plans remain yours. Confidentiality and discretion are built into how we work, not treated as premium add-ons. Where appropriate, engagements can be protected through NDAs and clearly defined information-access boundaries so you can work with external experts with confidence.",
+  },
+];
+
+export const whatWeDoOffers = [
+  {
+    title: "Strategy & Innovation",
+    icon: "/assets/practical-thinking.svg",
+    body: "Business strategy, innovation roadmaps, and new venture design. We help you decide what to build and why, before you spend money building it.",
+  },
+  {
+    title: "Software Development",
+    icon: "/assets/software-development.svg",
+    preview:
+      "Full end to end software development. We design, build, test, launch, and maintain web applications, mobile apps, and enterprise systems. If you have an idea, we can take it from concept to a working product, and from a",
+    body: "Full end to end software development. We design, build, test, launch, and maintain web applications, mobile apps, and enterprise systems. If you have an idea, we can take it from concept to a working product, and from a working product to a system that can grow with your business.",
+  },
+  {
+    title: "Dedicated Teams",
+    icon: "/assets/dedicated-teams.svg",
+    preview:
+      "Don't have a development team? We build one for you. We assemble the right mix of engineers, designers, and specialists for your project, then manage them so you don't have to: team management, project management,",
+    body: "Don't have a development team? We build one for you. We assemble the right mix of engineers, designers, and specialists for your project, then manage them so you don't have to: team management, project management, delivery, and the day-to-day coordination that keeps the work moving.",
+  },
+  {
+    title: "Digital Transformation & Process Optimization",
+    icon: "/assets/digital-transformation-process-optimization.svg",
+    preview:
+      "We go into your business, understand how work actually flows, and then fix it. That means automating repetitive work, streamlining processes, and building the systems that",
+    body: "We go into your business, understand how work actually flows, and then fix it. That means automating repetitive work, streamlining processes, and building the systems that connect people, data, and decisions so the organisation actually runs better.",
+  },
+  {
+    title: "Project Management",
+    icon: "/assets/project-management.svg",
+    body: "Already have the people but are struggling with delivery? We bring the structure: planning, coordination, tracking, and accountability, so your projects finish on time and on budget.",
+  },
+  {
+    title: "Product Management",
+    icon: "/assets/product-management.svg",
+    body: "Your engineers can build anything. The question is what. We provide product leadership across discovery, roadmapping, prioritization, and user research. Because building the thing right matters less than building the right thing.",
+  },
+  {
+    title: "Artificial Intelligence",
+    icon: "/assets/artificial-intelligence.svg",
+    body: "Practical AI, not hype. We identify where AI genuinely creates value in your organization and build solutions that deliver it.",
+  },
+  {
+    title: "Design",
+    icon: "/assets/design.svg",
+    body: "UI/UX design, graphic design, and brand identity. Design that makes products easier to use and companies easier to trust.",
+  },
+  {
+    title: "Technical Advisory & Evaluation",
+    icon: "/assets/technical-advisory-evaluation.svg",
+    body: "Need a second opinion? We evaluate products, review backend architecture, and audit technology decisions, so you know exactly where you stand before you invest further.",
+  },
+  {
+    title: "Expertise On Demand",
+    icon: "/assets/expertise-on-demand.svg",
+    body: "Sometimes you don't need a full team. You need one senior specialist for one specific job. A designer for a sprint, an architect for a review, a strategist for a quarter. We embed the right expert, for exactly as long as you need them.",
+  },
+];
+
