@@ -328,67 +328,135 @@ export const audienceTags = [
 
 export const audiences = [
   {
-    icon: "healthcare" as const,
-    title: "Healthcare",
-    body: "Compliant systems for care and data — built for regulated, high-stakes environments.",
+    title: "Startup Founders",
+    icon: "/assets/startup-founders.svg",
+    body: "You have an idea, limited time, and no room for wasted spend. We help you validate it, design it, build it, and get it in front of users, with senior expertise you couldn't otherwise hire at this stage.",
   },
   {
-    icon: "store" as const,
-    title: "Marketplace",
-    body: "Two-sided platforms that scale with supply, demand, and trust.",
+    title: "Small And Medium Businesses",
+    icon: "/assets/Small-and-medium-businesses.svg",
+    body: "You are competing with players many times your size. We help you grow, modernize your operations, and adopt the tools that level the field.",
   },
   {
-    icon: "house" as const,
-    title: "Real Estate",
-    body: "Property tech end to end — listings, operations, and owner workflows.",
+    title: "Large Enterprises",
+    icon: "/assets/large-enterprises.svg",
+    body: "You have the resources; the challenge is speed. We help you move faster, adopt AI responsibly, and transform legacy operations without disrupting the business that pays for it all.",
   },
   {
-    icon: "consult" as const,
-    title: "Communication Apps",
-    body: "Realtime messaging and voice products that stay fast under load.",
+    title: "Family Businesses",
+    icon: "/assets/family-businesses.svg",
+    body: "Modernizing for the next generation without losing what made the business work. We respect what you have built and upgrade how it runs.",
   },
   {
-    icon: "spark" as const,
-    title: "AI-Powered Products",
-    body: "Intelligent, content-driven sites and products with agents in the loop.",
+    title: "Governments",
+    icon: "/assets/governments.svg",
+    body: "Digital services that citizens actually use. We bring private sector execution discipline to public sector missions.",
   },
   {
-    icon: "manufacturing" as const,
-    title: "Manufacturing",
-    body: "Connected operations and IoT — from the floor to the office.",
+    title: "Universities And Educational Institutions",
+    icon: "/assets/universities-and-educationalp-institutions.svg",
+    body: "Bridging research, innovation, and real world application. We help institutions turn knowledge into ventures, programs, and partnerships.",
   },
   {
-    icon: "construction" as const,
-    title: "Construction",
-    body: "Field-to-office workflows that keep crews, schedules, and data aligned.",
-  },
-  {
-    icon: "cyber" as const,
-    title: "Cybersecurity",
-    body: "Defense built into the stack, not bolted on after launch.",
+    title: "Incubators, Accelerators, And Development Organizations",
+    icon: "/assets/Incubators-accelerators-and-development-organizations.svg",
+    body: "Your portfolio is only as strong as the support behind it. We work alongside your teams to strengthen the startups and ecosystems you're building.",
   },
 ];
 
-export const howWeWork = [
+export const howItWorksIntro = {
+  headingBefore: "A Clear Process, From First Conversation To",
+  underline: "Measurable",
+  headingAfter: "Result.",
+  body: "Every engagement follows the same structure, whether it is a four week strategy sprint or a year long build. You always know which stage you are in, what is expected of you, and what you receive at the end of it.",
+};
+
+export const howItWorksSteps = [
   {
-    icon: "sunrise" as const,
-    title: "Discovery Workshops",
-    body: "Co-create solutions in focused, time-boxed cross-functional sessions.",
-  },
-  {
-    icon: "transform" as const,
-    title: "Digital Transformation",
-    body: "Reshape teams, tools, and processes for the AI era, end to end.",
-  },
-  {
+    num: "01",
+    title: "Discovery",
     icon: "search" as const,
-    title: "UX Research",
-    body: "Discover user needs and validate concepts before you build a single feature.",
+    body: "We begin by understanding your business before recommending anything: conversations with the people closest to the problem, a review of your existing systems, product, or processes, and a clear picture of your constraints in budget, timeline, and team.",
+    receive: "A written summary of the challenge as we understand it.",
   },
   {
-    icon: "brain" as const,
-    title: "Tech Advisory",
-    body: "Architecture reviews and technology selection that align with your goals.",
+    num: "02",
+    title: "Assessment and Recommendation",
+    icon: "plan" as const,
+    body: "We set out your realistic options with the cost, effort, and trade off attached to each. If the best option is one we cannot deliver, we say so. If the problem is smaller than you thought, we say that too.",
+    receive: "A recommendation document with prioritised options and clear reasoning.",
+  },
+  {
+    num: "03",
+    title: "Project Planning",
+    icon: "setup" as const,
+    body: "We translate the chosen direction into a detailed plan covering phases, milestones, delivery dates, and responsibilities on both sides. The plan is built with your input rather than handed to you.",
+    receive: "A complete project plan with a milestone schedule and delivery dates.",
+  },
+  {
+    num: "04",
+    title: "Team Design",
+    icon: "team" as const,
+    body: "The plan determines the team. We assess which roles the work requires, at which seniority, and for how long. Not every project needs a full complement of senior specialists, and paying for one is rarely the right use of a budget.",
+    receive: "A proposed team structure showing each role, seniority, and duration, with costs made clear.",
+  },
+  {
+    num: "05",
+    title: "Engagement Setup",
+    icon: "execute" as const,
+    body: "We agree who is involved on your side and how closely you want to be involved, from daily updates and open access to the team, through to milestone reviews alone. We advise on what we believe the project requires from both sides, then follow your preference. Regardless of what you choose, you are informed immediately of any risk to timeline, budget, or scope.",
+    receive: "An engagement charter naming both teams, the agreed communication rhythm, and the escalation route.",
+  },
+  {
+    num: "06",
+    title: "Scope and Agreement",
+    icon: "target" as const,
+    body: "The plan, team, and engagement terms are formalised alongside deliverables, commercial terms, change control, and how success will be measured. No work begins until this is signed.",
+    receive: "A signed scope of work with fixed milestones and agreed success measures.",
+  },
+  {
+    num: "07",
+    title: "Execution",
+    icon: "scope" as const,
+    body: "This is the stage where most consultancies hand over and leave. We build, operate the team, and implement, working in short cycles against the plan so progress stays visible throughout rather than only at the end.",
+    receive: "Working output at every milestone and a standing progress review.",
+  },
+  {
+    num: "08",
+    title: "Handover and Enablement",
+    icon: "handover" as const,
+    body: "We do not create dependency. Every engagement concludes with your team equipped to operate what we built, through documentation, training, and standard operating procedures. It belongs to you.",
+    receive: "Full documentation, handover sessions, and a defined support window.",
+  },
+  {
+    num: "09",
+    title: "Measurement",
+    icon: "measure" as const,
+    body: "Success measures are agreed at the start and assessed at the end. Where results fall short, we address it. Many clients continue with us beyond this point. Many do not need to, and that is a good outcome as well.",
+    receive: "A results review against the agreed measures and a recommendation on what is worth doing next.",
+  },
+];
+
+export const engagementModels = [
+  {
+    title: "Project based",
+    icon: "/assets/project-management.svg",
+    body: "A defined outcome, timeline, and price. Suited to organizations that know what needs to be built.",
+  },
+  {
+    title: "Embedded expertise",
+    icon: "/assets/expertise-on-demand.svg",
+    body: "Senior specialists working within your team for a defined period. Suited to organizations with a capable team but a specific gap.",
+  },
+  {
+    title: "Managed team",
+    icon: "/assets/dedicated-teams.svg",
+    body: "We design, assemble, and operate a full team on your behalf, including supervision and delivery. Suited to organizations that need capability they do not currently have.",
+  },
+  {
+    title: "Ongoing partnership",
+    icon: "/assets/flexible-engagement.svg",
+    body: "A retained relationship for organizations that want strategy and execution support available continuously.",
   },
 ];
 
@@ -415,26 +483,167 @@ export const processSteps = [
   },
 ];
 
-export const experts = [
+export const expertIntro = {
+  headingBefore: "The Right Specialist,",
+  underline: "Matched",
+  headingAfter: "To The Work.",
+  body: "Lean Create draws on a network of professionals built over years of delivery work. Each specialist is known through completed projects rather than selected from a database, which means we can tell you what someone has actually delivered, not only what they list. If you are not sure about which experts you need, we will do the assessment for you based on the challenge your organization is facing.",
+};
+
+export const expertOffers = [
   {
-    icon: "users" as const,
-    title: "AI-Enabled Engineers",
-    body: "Senior engineers fluent in LLMs, RAG, and AI workflows — shipping agents that hold up in production.",
+    title: "Strategy and Business",
+    icon: "/assets/strategy-innovation.svg",
+    body: "Experts responsible for direction and the decisions that set it. They assess where the business currently stands, test the assumptions behind the plan, model the financial position, and define the path forward, whether you are entering a new market or improving an operation that has been running for years.",
   },
   {
-    icon: "brain" as const,
-    title: "Tech Advisory",
-    body: "Architecture reviews and technology selection that align with your goals, not a vendor checklist.",
+    title: "Product",
+    icon: "/assets/product-management.svg",
+    body: "Experts responsible for defining the product and how it should be shaped. They set the product direction, develop the roadmap, prioritise what is built and when, and establish requirements based on what users actually need.",
   },
   {
-    icon: "consult" as const,
-    title: "Consulting & Products",
-    body: "Strategy and build, from first idea to shipped product, with the people doing the work in the room.",
+    title: "Engineering",
+    icon: "/assets/software-development.svg",
+    body: "Experts who design system architecture and develop applications across web, mobile, and enterprise platforms. They integrate systems that must work together, build and maintain the databases behind them, and manage the cloud infrastructure and deployment pipelines everything runs on.",
   },
   {
-    icon: "sunrise" as const,
-    title: "Discovery Workshops",
-    body: "Focused sessions that turn an outcome into a sequenced plan you can actually execute.",
+    title: "Data and Artificial Intelligence",
+    icon: "/assets/artificial-intelligence.svg",
+    body: "Experts who build the data infrastructure an organization runs on and the artificial intelligence built upon it. They design and construct data pipelines, develop analytics and reporting, train and deploy machine learning models, and architect AI solutions from use case selection through to integration with live operations.",
+  },
+  {
+    title: "Design",
+    icon: "/assets/design.svg",
+    body: "Experts responsible for how a product is structured and experienced. They research how people use the product, design its interface and the flows within it, build the systems that keep it consistent as it grows, and shape the visual identity through which the organization presents itself.",
+  },
+  {
+    title: "Quality",
+    icon: "/assets/dedicated-teams.svg",
+    body: "Experts responsible for confirming that what has been built performs as intended. They test functionality across releases, measure performance under load, and verify accessibility standards, so that issues are identified during development rather than by your users.",
+  },
+  {
+    title: "Security and Compliance",
+    icon: "/assets/confidential.svg",
+    body: "Experts responsible for protecting systems and the information held within them. They design security into the architecture, assess vulnerabilities, test defences under controlled conditions, and ensure data practices meet the regulatory obligations applying to your sector.",
+  },
+  {
+    title: "Delivery and Operations",
+    icon: "/assets/project-management.svg",
+    body: "Experts responsible for work reaching completion. They plan and coordinate delivery, hold teams accountable to milestones, improve the processes surrounding the work, and establish working methods that remain in place after the engagement ends.",
+  },
+  {
+    title: "Specialist Advisory",
+    icon: "/assets/technical-advisory-evaluation.svg",
+    body: "Experts brought in for independent assessment on decisions that carry consequence. They conduct technical due diligence ahead of an acquisition or investment, audit systems and codebases already built, advise on regulatory requirements in sectors such as healthcare, financial services, and government, and train teams to operate what has been delivered.",
+  },
+];
+
+export const expertRoles = [
+  {
+    title: "Strategy and Business",
+    image: "/images/office.png",
+    items: [
+      "Business strategy consultant",
+      "Startup consultant and advisor",
+      "Innovation consultant",
+      "Market researcher and analyst",
+      "Business analyst",
+      "Financial modelling specialist",
+      "Go-to-market and growth strategist",
+    ],
+  },
+  {
+    title: "Product",
+    image: "/images/expertise-design.png",
+    items: [
+      "Product manager",
+      "Product owner",
+      "Product strategist",
+      "User researcher",
+      "Business analyst",
+    ],
+  },
+  {
+    title: "Engineering",
+    image: "/images/expertise-tech.png",
+    items: [
+      "Technical architect",
+      "Solutions architect",
+      "Full stack engineer",
+      "Mobile engineer, iOS and Android",
+      "Enterprise systems engineer",
+      "Database engineer",
+      "DevOps and cloud infrastructure engineer",
+    ],
+  },
+  {
+    title: "Data and Artificial Intelligence",
+    image: "/images/expertise-automation.png",
+    items: [
+      "Data scientist",
+      "Data engineer",
+      "Data analyst",
+      "Machine learning specialist",
+      "AI solutions architect",
+      "Automation specialist",
+      "Business intelligence analyst",
+    ],
+  },
+  {
+    title: "Design",
+    image: "/images/service-design.png",
+    items: [
+      "UX designer",
+      "UI designer",
+      "Product designer",
+      "Brand and visual designer",
+      "Design systems specialist",
+      "Content designer",
+    ],
+  },
+  {
+    title: "Quality",
+    image: "/images/digital-transform.png",
+    items: [
+      "Quality assurance engineer",
+      "Test automation engineer",
+      "Performance tester",
+      "Accessibility specialist",
+      "Release quality lead",
+    ],
+  },
+  {
+    title: "Security and Compliance",
+    image: "/images/service-cloud.png",
+    items: [
+      "Security architect",
+      "Information security specialist",
+      "Penetration tester",
+      "Compliance specialist",
+      "Privacy and data protection advisor",
+    ],
+  },
+  {
+    title: "Delivery and Operations",
+    image: "/images/mvp.png",
+    items: [
+      "Project manager",
+      "Delivery manager",
+      "Scrum master",
+      "Operations specialist",
+      "Process improvement consultant",
+    ],
+  },
+  {
+    title: "Specialist Advisory",
+    image: "/images/case-study.png",
+    items: [
+      "Technical due diligence advisor",
+      "Systems and codebase auditor",
+      "Regulatory advisor",
+      "Independent technical assessor",
+      "Enablement specialist",
+    ],
   },
 ];
 

@@ -3,12 +3,21 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "motion/react";
+import { cn } from "@/lib/cn";
 import { services } from "@/lib/site";
 
 const GAP = 24;
 const INTERVAL = 3800;
 
-export function ExpertiseSlider() {
+type Slide = (typeof services)[number];
+
+export function ExpertiseSlider({
+  items = services,
+  className,
+}: {
+  items?: Pick<Slide, "title" | "items" | "image">[];
+  className?: string;
+}) {
   const reduce = useReducedMotion();
   const firstCardRef = useRef<HTMLElement>(null);
   const [index, setIndex] = useState(0);
@@ -16,7 +25,7 @@ export function ExpertiseSlider() {
   const [paused, setPaused] = useState(false);
   const [animate, setAnimate] = useState(true);
 
-  const slides = [...services, ...services];
+  const slides = [...items, ...items];
 
   useEffect(() => {
     const measure = () => {
@@ -39,19 +48,19 @@ export function ExpertiseSlider() {
   }, [paused, reduce]);
 
   useEffect(() => {
-    if (index < services.length) return;
+    if (index < items.length) return;
     const timeout = window.setTimeout(() => {
       setAnimate(false);
       setIndex(0);
     }, 700);
     return () => window.clearTimeout(timeout);
-  }, [index]);
+  }, [index, items.length]);
 
   const offset = index * (cardWidth + GAP);
 
   return (
     <div
-      className="mt-12 overflow-hidden"
+      className={cn("mt-12 overflow-hidden", className)}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

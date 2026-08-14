@@ -38,52 +38,113 @@ const social = [
   { label: "Instagram", href: "https://instagram.com", name: "instagram" as const },
 ];
 
+function FooterCta({ pathname }: { pathname: string }) {
+  if (
+    pathname === "/about" ||
+    pathname === "/what-we-do" ||
+    pathname === "/experts"
+  )
+    return null;
+
+  const inner =
+    pathname === "/who-we-help" ? (
+      <>
+        <h2 className="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
+          Tell Us What You Are Trying To Solve, We Will Help Identify The Right{" "}
+          <span className="relative inline-block pb-3">
+            Expertise
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/underline.svg"
+              alt=""
+              width={357}
+              height={17}
+              className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0"
+            />
+          </span>
+          , Approach
+        </h2>
+        <div className="mt-8">
+          <Button href="/contact" arrow>
+            Tell Us Your Challenge
+          </Button>
+        </div>
+      </>
+    ) : pathname === "/how-we-work" ? (
+      <>
+        <h2 className="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
+          Every Engagement Begins The Same Way, With A Conversation And{" "}
+          <span className="relative inline-block pb-3">
+            No Obligation.
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/underline.svg"
+              alt=""
+              width={357}
+              height={17}
+              className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0"
+            />
+          </span>
+        </h2>
+        <div className="mt-8">
+          <Button href="/contact" arrow>
+            Tell Us Your Challenge
+          </Button>
+        </div>
+      </>
+    ) : (
+      <>
+        <h2 className="text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
+          Tell Us Your Challenge. We Will Work Out{" "}
+          <span className="font-bold">
+            <span className="relative inline-block pb-3">
+              The Rest.
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/underline.svg"
+                alt=""
+                width={357}
+                height={17}
+                className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0 invert"
+              />
+            </span>
+          </span>
+        </h2>
+        <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white md:text-base">
+          Most of our clients arrive with a situation rather than a specification,
+          and that is the right place to begin. Describe what you are facing in
+          your own words. We will tell you plainly what resolving it would
+          involve, what it would take, and whether we are the right people for it.
+          If we are not, we will say so and point you toward someone who is.
+        </p>
+        <div className="mt-8">
+          <Button href="/contact" arrow>
+            Tell Us Your Challenge
+          </Button>
+        </div>
+        <p className="mt-4 text-sm text-white/90">
+          No cost, no obligation, and no sales pitch.
+        </p>
+      </>
+    );
+
+  return (
+    <div className={pathname === "/how-we-work" ? "bg-cream" : "bg-white"}>
+      <Container>
+        <div className="rounded-t-[2.5rem] bg-orange px-6 py-14 text-center sm:px-12 md:py-20">
+          {inner}
+        </div>
+      </Container>
+    </div>
+  );
+}
+
 export function Footer() {
   const pathname = usePathname();
-  const hideCta = pathname === "/about" || pathname === "/what-we-do";
 
   return (
     <footer>
-      {hideCta ? null : (
-        <div className="bg-cream">
-          <Container>
-            <div className="rounded-t-[2.5rem] bg-orange px-6 py-14 text-center sm:px-12 md:py-20">
-              <h2 className="text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-[2.5rem] md:leading-tight">
-                Tell Us Your Challenge. We Will Work Out{" "}
-                <span className="font-bold">
-                  <span className="relative inline-block pb-3">
-                    The Rest.
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/assets/underline.svg"
-                      alt=""
-                      width={357}
-                      height={17}
-                      className="pointer-events-none absolute bottom-0 left-0 h-[12px] w-full select-none brightness-0 invert"
-                    />
-                  </span>
-                </span>
-              </h2>
-              <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white md:text-base">
-                Most of our clients arrive with a situation rather than a
-                specification, and that is the right place to begin. Describe what
-                you are facing in your own words. We will tell you plainly what
-                resolving it would involve, what it would take, and whether we are
-                the right people for it. If we are not, we will say so and point
-                you toward someone who is.
-              </p>
-              <div className="mt-8">
-                <Button href="/contact" arrow>
-                  Tell Us Your Challenge
-                </Button>
-              </div>
-              <p className="mt-4 text-sm text-white/90">
-                No cost, no obligation, and no sales pitch.
-              </p>
-            </div>
-          </Container>
-        </div>
-      )}
+      <FooterCta pathname={pathname} />
 
       <div className="bg-charcoal bg-grid-dark">
         <Container className="pt-16">
@@ -160,8 +221,8 @@ export function Footer() {
           </div>
         </Container>
 
-        <Container className="pt-16">
-          <div className="flex flex-col items-start justify-between gap-4 rounded-t-2xl bg-orange px-6 py-3.5 sm:flex-row sm:items-center sm:px-8">
+        <div className="mt-16 bg-orange">
+          <Container className="flex flex-col items-start justify-between gap-4 py-3.5 sm:flex-row sm:items-center">
             <p className="text-sm text-white">© 2026 all rights reserved</p>
             <div className="flex items-center gap-3">
               <span className="text-sm text-white">Social Media :</span>
@@ -178,8 +239,8 @@ export function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
     </footer>
   );
