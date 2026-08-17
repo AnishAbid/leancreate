@@ -375,63 +375,63 @@ export const howItWorksSteps = [
   {
     num: "01",
     title: "Discovery",
-    icon: "search" as const,
+    icon: "/assets/discovery.svg",
     body: "We begin by understanding your business before recommending anything: conversations with the people closest to the problem, a review of your existing systems, product, or processes, and a clear picture of your constraints in budget, timeline, and team.",
     receive: "A written summary of the challenge as we understand it.",
   },
   {
     num: "02",
     title: "Assessment and Recommendation",
-    icon: "plan" as const,
+    icon: "/assets/assessment-and-recommendation.svg",
     body: "We set out your realistic options with the cost, effort, and trade off attached to each. If the best option is one we cannot deliver, we say so. If the problem is smaller than you thought, we say that too.",
     receive: "A recommendation document with prioritised options and clear reasoning.",
   },
   {
     num: "03",
     title: "Project Planning",
-    icon: "setup" as const,
+    icon: "/assets/project-planning.svg",
     body: "We translate the chosen direction into a detailed plan covering phases, milestones, delivery dates, and responsibilities on both sides. The plan is built with your input rather than handed to you.",
     receive: "A complete project plan with a milestone schedule and delivery dates.",
   },
   {
     num: "04",
     title: "Team Design",
-    icon: "team" as const,
+    icon: "/assets/team-design.svg",
     body: "The plan determines the team. We assess which roles the work requires, at which seniority, and for how long. Not every project needs a full complement of senior specialists, and paying for one is rarely the right use of a budget.",
     receive: "A proposed team structure showing each role, seniority, and duration, with costs made clear.",
   },
   {
     num: "05",
     title: "Engagement Setup",
-    icon: "execute" as const,
+    icon: "/assets/engagement-setup.svg",
     body: "We agree who is involved on your side and how closely you want to be involved, from daily updates and open access to the team, through to milestone reviews alone. We advise on what we believe the project requires from both sides, then follow your preference. Regardless of what you choose, you are informed immediately of any risk to timeline, budget, or scope.",
     receive: "An engagement charter naming both teams, the agreed communication rhythm, and the escalation route.",
   },
   {
     num: "06",
     title: "Scope and Agreement",
-    icon: "target" as const,
+    icon: "/assets/scope-and-agreement.svg",
     body: "The plan, team, and engagement terms are formalised alongside deliverables, commercial terms, change control, and how success will be measured. No work begins until this is signed.",
     receive: "A signed scope of work with fixed milestones and agreed success measures.",
   },
   {
     num: "07",
     title: "Execution",
-    icon: "scope" as const,
+    icon: "/assets/execution.svg",
     body: "This is the stage where most consultancies hand over and leave. We build, operate the team, and implement, working in short cycles against the plan so progress stays visible throughout rather than only at the end.",
     receive: "Working output at every milestone and a standing progress review.",
   },
   {
     num: "08",
     title: "Handover and Enablement",
-    icon: "handover" as const,
+    icon: "/assets/handover-and-enablement.svg",
     body: "We do not create dependency. Every engagement concludes with your team equipped to operate what we built, through documentation, training, and standard operating procedures. It belongs to you.",
     receive: "Full documentation, handover sessions, and a defined support window.",
   },
   {
     num: "09",
     title: "Measurement",
-    icon: "measure" as const,
+    icon: "/assets/measurement.svg",
     body: "Success measures are agreed at the start and assessed at the end. Where results fall short, we address it. Many clients continue with us beyond this point. Many do not need to, and that is a good outcome as well.",
     receive: "A results review against the agreed measures and a recommendation on what is worth doing next.",
   },
@@ -459,6 +459,12 @@ export const engagementModels = [
     body: "A retained relationship for organizations that want strategy and execution support available continuously.",
   },
 ];
+
+export const contactIntro = {
+  headingBefore: "Tell Us Your",
+  underline: "Challenge.",
+  body: "First conversations are straightforward. Share the problem, the constraint, or the idea — we will help you figure out the right next step.",
+};
 
 export const processSteps = [
   {

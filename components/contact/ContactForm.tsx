@@ -24,11 +24,11 @@ function Field({
   placeholder?: string;
 }) {
   const classes = cn(
-    "mt-2 w-full rounded-xl border bg-white px-4 py-3 text-sm text-charcoal outline-none transition-shadow",
+    "mt-2 w-full rounded-xl border bg-white px-4 py-3.5 text-sm text-charcoal outline-none transition-shadow placeholder:text-muted/50",
     error
       ? "border-orange ring-2 ring-orange/20"
       : "border-transparent focus:ring-2 focus:ring-orange/40",
-    textarea && "min-h-36 resize-y",
+    textarea && "min-h-40 resize-y",
   );
 
   return (
@@ -86,7 +86,7 @@ export function ContactForm() {
 
   if (state.ok) {
     return (
-      <div className="rounded-3xl bg-cream p-8 md:p-10">
+      <div className="rounded-[1.5rem] bg-cream p-8 md:p-10">
         <h3 className="text-xl font-bold text-charcoal">Message sent.</h3>
         <p className="mt-2 text-sm leading-6 text-muted">{state.message}</p>
       </div>
@@ -94,7 +94,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-3xl bg-cream p-8 md:p-10">
+    <form onSubmit={onSubmit} className="rounded-[1.5rem] bg-cream p-8 md:p-10">
       <div className="space-y-5">
         <Field label="Name" name="name" required error={state.errors?.name} />
         <Field

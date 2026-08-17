@@ -42,7 +42,8 @@ function FooterCta({ pathname }: { pathname: string }) {
   if (
     pathname === "/about" ||
     pathname === "/what-we-do" ||
-    pathname === "/experts"
+    pathname === "/experts" ||
+    pathname === "/contact"
   )
     return null;
 
