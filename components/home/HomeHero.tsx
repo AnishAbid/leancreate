@@ -13,30 +13,32 @@ export function HomeHero() {
 
   return (
     <section className="hero-wash bg-grid-light relative overflow-hidden">
-      <Container className="relative grid items-center gap-12 pt-36 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pt-40 lg:pb-24">
+      <Container className="relative grid items-center gap-12 pt-36 pb-20 lg:grid-cols-[1.25fr_0.75fr] lg:pt-40 lg:pb-24">
         <div className="relative z-10">
           <motion.h1
             initial={hide}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.08, ease }}
-            className="max-w-xl text-4xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]"
+            className="max-w-none text-4xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.75rem]"
           >
             From Idea To
             <br />
             Execution. And
             <br />
-            <span className="relative inline-block pb-4">
-              Everything
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/underline.svg"
-                alt=""
-                width={357}
-                height={17}
-                className="pointer-events-none absolute bottom-0 left-0 h-[17px] w-full select-none brightness-0"
-              />
-            </span>{" "}
-            In Between.
+            <span className="whitespace-nowrap">
+              <span className="relative inline-block pb-4">
+                Everything
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/assets/underline.svg"
+                  alt=""
+                  width={357}
+                  height={17}
+                  className="pointer-events-none absolute bottom-0 left-0 h-[17px] w-full select-none brightness-0"
+                />
+              </span>{" "}
+              In Between.
+            </span>
           </motion.h1>
           <motion.p
             initial={hide}
