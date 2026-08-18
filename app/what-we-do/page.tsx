@@ -20,9 +20,11 @@ export default function WhatWeDoPage() {
       <section className="bg-white">
         <Container className="py-16 md:py-24">
           <Reveal>
-            <h2 className="mx-auto max-w-4xl text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.6rem] md:leading-tight">
-              From Idea To Execution, And{" "}
-              <span className="relative inline-block pb-3">
+            <h2 className="mx-auto max-w-4xl text-center text-3xl font-normal tracking-tight text-charcoal sm:text-4xl md:text-[2.6rem] md:leading-tight">
+              From Idea To Execution,
+              <br />
+              And{" "}
+              <span className="relative inline-block pb-3 font-bold">
                 Everything
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -35,10 +37,12 @@ export default function WhatWeDoPage() {
               </span>{" "}
               In Between.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-7 text-muted md:text-base">
+            <p className="mx-auto mt-6 max-w-5xl text-center text-sm leading-7 text-muted md:text-base">
               Lean Create helps organizations solve business problems, build
-              digital products, and modernize how they work. Wherever you are in
-              the journey, we meet you there.
+              digital products, and modernize how they work.
+            </p>
+            <p className="mx-auto text-center text-sm leading-7 text-muted md:text-base">
+              Wherever you are in the journey, we meet you there.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">

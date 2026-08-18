@@ -5,7 +5,7 @@ import { aboutHowWeWork } from "@/lib/site";
 
 export function AboutHowWeWork() {
   return (
-    <section className="bg-cream">
+    <section className="bg-white">
       <Container className="grid gap-10 py-16 md:py-24 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.5rem]">
@@ -26,7 +26,7 @@ export function AboutHowWeWork() {
         <div className="space-y-4">
           {aboutHowWeWork.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.04}>
-              <article className="rounded-[1.5rem] bg-cream-dark px-6 py-6 md:px-8 md:py-7">
+              <article className="rounded-[1.5rem] bg-cream px-6 py-6 md:px-8 md:py-7">
                 <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-muted">{item.body}</p>
               </article>

@@ -1,12 +1,14 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { valueProps } from "@/lib/site";
 
+const arrowTop = "/assets/arrow-line-downwords.svg.svg";
+const arrowBottom = "/assets/arrow-line-upwords.svg";
+
 export function ValueGrid() {
   return (
-    <section className="bg-cream">
+    <section className="bg-white">
       <Container className="py-20 md:py-28">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
@@ -32,24 +34,49 @@ export function ValueGrid() {
             </p>
           </div>
         </Reveal>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {valueProps.map((item, index) => (
-            <Reveal key={item.title} delay={index * 0.08}>
-              <article className="h-full rounded-[1.5rem] bg-white p-6 md:p-7">
-                <Image
-                  src={item.image}
-                  alt=""
-                  width={80}
-                  height={80}
-                  className="h-11 w-11 object-contain"
-                />
-                <h3 className="mt-5 text-lg font-bold text-charcoal">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
-              </article>
-            </Reveal>
-          ))}
+        <div className="relative mt-14 lg:py-8">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 z-10 hidden lg:grid lg:grid-cols-4 lg:gap-5"
+          >
+            {valueProps.slice(0, -1).map((item, index) => {
+              const isTop = index % 2 === 0;
+              return (
+                <div key={item.title} className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={isTop ? arrowTop : arrowBottom}
+                    alt=""
+                    width={154}
+                    height={28}
+                    className={`absolute left-[70%] w-[154px] max-w-none ${
+                      isTop ? "top-3" : "bottom-3"
+                    }`}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {valueProps.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.08} className="h-full">
+                <article className="h-full rounded-[1.5rem] bg-cream p-6 md:p-7">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt=""
+                    width={80}
+                    height={80}
+                    className="h-12 w-12 object-contain"
+                  />
+                  <h3 className="mt-5 text-lg font-bold tracking-tight text-charcoal">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
         <Reveal delay={0.15} className="mt-12 text-center">
           <Button href="/how-we-work" arrow>

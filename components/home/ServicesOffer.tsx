@@ -1,17 +1,16 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { offerServices } from "@/lib/site";
+import { ExpertiseSlider } from "@/components/home/ExpertiseSlider";
 
 export function ServicesOffer() {
   return (
-    <section className="bg-cream">
-      <Container className="py-20 md:py-24">
+    <section className="overflow-hidden bg-grid-cream">
+      <Container className="pt-20 md:pt-24">
         <Reveal>
-          <h2 className="text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.5rem]">
+          <h2 className="text-center text-3xl font-normal tracking-tight text-charcoal sm:text-4xl md:text-[2.5rem]">
             Services We{" "}
-            <span className="relative inline-block pb-3">
+            <span className="relative inline-block pb-3 font-bold">
               Offer.
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -24,28 +23,10 @@ export function ServicesOffer() {
             </span>
           </h2>
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {offerServices.map((item, index) => (
-            <Reveal key={item.title} delay={index * 0.08}>
-              <article>
-                <div className="relative aspect-[16/11] overflow-hidden rounded-[1.5rem]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <h3 className="mt-5 text-xl font-bold tracking-tight text-charcoal">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.15} className="mt-12 text-center">
+      </Container>
+      <ExpertiseSlider cardClassName="bg-white shadow-[0_12px_32px_-20px_rgba(26,26,26,0.28)]" />
+      <Container className="pt-12 pb-20 text-center md:pb-24">
+        <Reveal delay={0.15}>
           <Button href="/what-we-do" arrow>
             View All Services
           </Button>

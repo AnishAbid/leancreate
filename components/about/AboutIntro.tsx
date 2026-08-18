@@ -19,10 +19,10 @@ export function AboutIntro() {
             />
           </h2>
         </Reveal>
-        <div className="mx-auto mt-10 max-w-3xl space-y-6">
+        <div className="mx-auto mt-10 max-w-4xl space-y-6 text-center">
           {aboutIntro.map((paragraph) => (
             <Reveal key={paragraph.slice(0, 32)}>
-              <p className="text-sm leading-7 text-muted md:text-base md:leading-8">
+              <p className="text-center text-sm leading-7 text-muted md:text-base md:leading-8">
                 {paragraph}
               </p>
             </Reveal>

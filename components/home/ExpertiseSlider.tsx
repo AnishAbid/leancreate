@@ -14,9 +14,11 @@ type Slide = (typeof services)[number];
 export function ExpertiseSlider({
   items = services,
   className,
+  cardClassName = "bg-cream",
 }: {
   items?: Pick<Slide, "title" | "items" | "image">[];
   className?: string;
+  cardClassName?: string;
 }) {
   const reduce = useReducedMotion();
   const firstCardRef = useRef<HTMLElement>(null);
@@ -78,9 +80,12 @@ export function ExpertiseSlider({
           <article
             key={`${service.title}-${i}`}
             ref={i === 0 ? firstCardRef : undefined}
-            className="flex w-[min(20.5rem,82vw)] shrink-0 flex-col overflow-hidden rounded-[1.5rem] bg-cream md:w-[min(22rem,calc((100vw-6rem)/3.15))]"
+            className={cn(
+              "flex w-[min(20.5rem,82vw)] shrink-0 flex-col overflow-hidden rounded-[1.5rem] md:w-[min(22rem,calc((100vw-6rem)/3.15))]",
+              cardClassName,
+            )}
           >
-            <div className="relative aspect-[16/11] overflow-hidden">
+            <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title}
@@ -89,11 +94,11 @@ export function ExpertiseSlider({
                 sizes="360px"
               />
             </div>
-            <div className="flex flex-1 flex-col px-6 pt-5 pb-5">
+            <div className="flex flex-1 flex-col px-6 pt-6 pb-6">
               <h3 className="text-xl font-bold tracking-tight text-charcoal">
                 {service.title}
               </h3>
-              <ul className="mt-3 space-y-1.5 text-sm leading-6 text-muted">
+              <ul className="mt-4 space-y-1.5 text-sm leading-6 text-muted">
                 {service.items.map((item) => (
                   <li key={item} className="flex gap-2.5">
                     <span className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-muted" />

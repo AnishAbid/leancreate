@@ -19,39 +19,35 @@ export const navItems = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
-export const footerLinkCols = [
-  [
-    { href: "/what-we-do", label: "What We Do" },
-    { href: "/who-we-help", label: "Who We Help" },
-    { href: "/how-we-work", label: "How We Work" },
-  ],
-  [
-    { href: "/what-we-do", label: "Service" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
+export const footerLinks = [
+  { href: "/what-we-do", label: "What We Do" },
+  { href: "/who-we-help", label: "Who We Help" },
+  { href: "/how-we-work", label: "How We Work" },
+  { href: "/what-we-do", label: "Service" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const valueProps = [
   {
-    title: "Practical outcomes",
+    title: "Tell us your challenge",
     body: "Experienced specialists matched to your specific challenge.",
-    image: "/assets/practicaloutcome.png",
+    image: "/assets/tell-us-your-challenge.svg",
   },
   {
-    title: "The right expertise",
-    body: "From a focused consultation to long-term advisory support.",
-    image: "/assets/rightexpertise.png",
+    title: "We understand and recommend",
+    body: "We assess the situation and set out your realistic options.",
+    image: "/assets/we-understand-and-recommend.svg",
   },
   {
-    title: "Lean Create",
-    body: "Business-focused recommendations that can actually be implemented.",
-    image: "/assets/leancreate.png",
+    title: "We assemble and execute.",
+    body: "The right expertise for the work, building alongside your team.",
+    image: "/assets/we-assemble-and-execute..svg",
   },
   {
-    title: "Your challenge",
-    body: "Your ideas, products and business information are treated with professional confidentiality.",
-    image: "/assets/yourchallenge.png",
+    title: "You move forward.",
+    body: "A delivered result, and a team equipped to carry it on.",
+    image: "/assets/you-move-forward.svg",
   },
 ];
 
@@ -69,7 +65,7 @@ export const services = [
       "Feasibility studies",
       "Go to market strategy",
     ],
-    image: "/images/office.png",
+    image: "/images/strategy-and-growth.png",
     href: "/what-we-do",
   },
   {
@@ -85,7 +81,7 @@ export const services = [
       "Post launch performance tracking and iteration",
       "Product audits for existing products",
     ],
-    image: "/images/expertise-design.png",
+    image: "/images/product-and-design.png",
     href: "/what-we-do",
   },
   {
@@ -101,24 +97,24 @@ export const services = [
       "Quality assurance and testing",
       "Maintenance and ongoing support",
     ],
-    image: "/images/expertise-tech.png",
+    image: "/images/software-development.png",
     href: "/what-we-do",
   },
   {
     title: "Artificial Intelligence",
     items: [
-      "AI opportunity identification",
-      "AI use case definition",
+      "AI opportunity assessment",
+      "AI use case development",
       "AI solution design",
-      "Machine learning",
+      "Machine learning model development",
       "AI integration",
-      "Data recognition",
-      "Data analysis",
-      "Automation",
+      "Data readiness assessment",
+      "Data analytics",
+      "Automation strategy",
       "AI governance",
       "Team enablement",
     ],
-    image: "/images/expertise-automation.png",
+    image: "/images/artificial-intelligence-and-data.jpg",
     href: "/what-we-do",
   },
 ];
@@ -275,27 +271,27 @@ export const principles = [
     image: "/assets/curated-expertise.svg",
   },
   {
-    title: "Flexible engagements",
+    title: "Flexible Engagements",
     body: "We assess your challenge, understand your goals and identify the right approach and expertise for your situation.",
     image: "/assets/flexible-engagement.svg",
   },
   {
-    title: "The right level, not the highest level",
+    title: "The Right Experts",
     body: "Not every project requires a full complement of senior specialists. We design the team around the work and your budget, and explain the reasoning behind it.",
     image: "/assets/practical-thinking.svg",
   },
   {
-    title: "Practical thinking",
+    title: "Practical Thinking",
     body: "No fifty page decks that sit in a drawer. Every recommendation arrives with a route to executing it.",
-    image: "/assets/practical-thinking.svg",
+    image: "/assets/practica-thinking-2.svg",
   },
   {
-    title: "Transparency throughout",
+    title: "Transparency Throughout",
     body: "The plan, the team, the costs, and the risks, in full and in advance. Nothing about how we work should come as a surprise.",
-    image: "/assets/flexible-engagement.svg",
+    image: "/assets/transparency-throughout.svg",
   },
   {
-    title: "Confidential by design",
+    title: "Confidential By Design",
     body: "Your ideas, data, and plans remain yours. Discretion is standard practice rather than an added service.",
     image: "/assets/confidential.svg",
   },
@@ -547,7 +543,7 @@ export const expertOffers = [
 export const expertRoles = [
   {
     title: "Strategy and Business",
-    image: "/images/office.png",
+    image: "/images/strategy-and-business.png",
     items: [
       "Business strategy consultant",
       "Startup consultant and advisor",
@@ -560,7 +556,7 @@ export const expertRoles = [
   },
   {
     title: "Product",
-    image: "/images/expertise-design.png",
+    image: "/images/product.png",
     items: [
       "Product manager",
       "Product owner",
@@ -571,7 +567,7 @@ export const expertRoles = [
   },
   {
     title: "Engineering",
-    image: "/images/expertise-tech.png",
+    image: "/images/engineering.png",
     items: [
       "Technical architect",
       "Solutions architect",
@@ -584,15 +580,15 @@ export const expertRoles = [
   },
   {
     title: "Data and Artificial Intelligence",
-    image: "/images/expertise-automation.png",
+    image: "/images/data-and-artificial-Intelligence.jpg",
     items: [
-      "Data scientist",
-      "Data engineer",
-      "Data analyst",
-      "Machine learning specialist",
-      "AI solutions architect",
-      "Automation specialist",
-      "Business intelligence analyst",
+      "Data engineering",
+      "Data analytics",
+      "Data science",
+      "Machine learning",
+      "AI solutions",
+      "Automations",
+      "Business intelligence",
     ],
   },
   {
@@ -809,8 +805,8 @@ export const caseStudies = [
 
 export const aboutIntro = [
   "Lean Create is a strategy and technology consultancy. We start with your challenge, work to understand it properly, and then bring you whatever resolving it actually requires.",
-  "Sometimes that is a single specialist. If you need a technical architect to review your systems, a product leader to bring order to a roadmap, or a designer for a defined piece of work, we connect you with the right person from a network built over years and selected on the basis of delivered work. Sometimes it is a complete team, assembled and managed on your behalf. And sometimes it is an end to end product, taken from initial concept through to a launched, working system.",
-  "What does not change is where we begin. We do not arrive with a solution and look for somewhere to apply it. We listen first, understand the business and the constraints around it, and then recommend the path we believe is right, whether that is extensive or minimal.",
+  "Sometimes that is a single specialist. If you need a technical architect to review your systems, a product leader to bring order to a roadmap, or a designer for a defined piece of work, we connect you with the right person from a network built over years and selected on the basis of delivered work. Sometimes it is a complete team, assembled and managed on your behalf. And sometimes",
+  "it is an end to end product, taken from initial concept through to a launched, working system. What does not change is where we begin. We do not arrive with a solution and look for somewhere to apply it. We listen first, understand the business and the constraints around it, and then recommend the path we believe is right, whether that is extensive or minimal.",
   "Our clients range from startup founders and family businesses to large enterprises, governments, and universities. What they have in common is a real problem to solve: a product that needs to exist, an operation that needs to run better, or an organization that needs to be ready for what is coming.",
   "Most consultancies stop at the recommendation. We stay to execute. And we measure the work the way you do: in results. Products launched, operations improved, decisions made with confidence. No buzzwords, no fifty page decks that sit in a drawer. Just practical work that creates long term value.",
 ];
@@ -870,7 +866,7 @@ export const aboutHowWeWork = [
 export const whatWeDoOffers = [
   {
     title: "Strategy & Innovation",
-    icon: "/assets/practical-thinking.svg",
+    icon: "/assets/strategy-innovation.svg",
     body: "Business strategy, innovation roadmaps, and new venture design. We help you decide what to build and why, before you spend money building it.",
   },
   {

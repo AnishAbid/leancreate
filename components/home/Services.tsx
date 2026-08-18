@@ -2,7 +2,16 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { ExpertiseSlider } from "@/components/home/ExpertiseSlider";
-import { MidCta } from "@/components/home/MidCta";
+import { expertRoles } from "@/lib/site";
+
+const expertiseCards = expertRoles.filter((role) =>
+  [
+    "Strategy and Business",
+    "Product",
+    "Engineering",
+    "Data and Artificial Intelligence",
+  ].includes(role.title),
+);
 
 export function Services() {
   return (
@@ -33,9 +42,8 @@ export function Services() {
           </Reveal>
         </Container>
 
-        <ExpertiseSlider />
+        <ExpertiseSlider items={expertiseCards} cardClassName="bg-white" />
       </div>
-      <MidCta />
     </section>
   );
 }

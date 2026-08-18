@@ -21,11 +21,11 @@ export default function WhoWeHelpPage() {
       <section className="bg-white">
         <Container className="py-16 md:py-24">
           <Reveal>
-            <h2 className="mx-auto max-w-4xl text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.6rem] md:leading-tight">
+            <h2 className="mx-auto max-w-4xl text-center text-3xl font-normal tracking-tight text-charcoal sm:text-4xl md:text-[2.6rem] md:leading-tight">
               Every Industry. Every Stage.
               <br />
               One{" "}
-              <span className="relative inline-block pb-3">
+              <span className="relative inline-block pb-3 font-bold">
                 Standard
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

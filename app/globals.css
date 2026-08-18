@@ -41,6 +41,14 @@ body {
   background-size: 72px 72px;
 }
 
+.bg-grid-cream {
+  background-color: #f5f1ea;
+  background-image:
+    linear-gradient(rgba(26, 26, 26, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 26, 26, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
 .hero-wash {
   background:
     radial-gradient(ellipse 80% 70% at 50% 40%, #f07842 0%, #e25b2a 48%, #c4451c 100%);
@@ -63,6 +71,20 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.footer-links-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.footer-links-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.footer-links-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .lift-card {

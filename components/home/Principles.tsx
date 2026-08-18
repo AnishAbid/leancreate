@@ -7,13 +7,13 @@ export function Principles() {
     <section className="bg-white">
       <Container className="pt-20 pb-10 md:pt-24 md:pb-12">
         <Reveal>
-          <p className="text-center text-sm font-medium text-orange">
+          <p className="text-center text-[25px] font-medium text-orange">
             Why Lean Create
           </p>
           <h2 className="mt-3 text-center text-3xl font-bold tracking-tight text-charcoal sm:text-4xl md:text-[2.5rem]">
-            Built For Expertise, Not{" "}
+            The Right{" "}
             <span className="relative inline-block pb-3">
-              Overheads.
+              Experts.
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/assets/underline.svg"
